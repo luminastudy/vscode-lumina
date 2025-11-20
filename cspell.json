@@ -1,0 +1,30 @@
+{
+  "version": "0.2",
+  "language": "en,he",
+  "words": [
+    "tupe",
+    "pnpm",
+    "vitest",
+    "husky",
+    "eslint",
+    "tsconfig",
+    "esbenp",
+    "lumina",
+    "vscode",
+    "vsce",
+    "luminastudy"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "*",
+      "locale": "en,he"
+    }
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "pnpm-lock.yaml",
+    "*.min.js"
+  ]
+}
