@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "publisher": "lumina-study",
   "engines": {
-    "vscode": "^1.95.0",
+    "vscode": "^1.106.0",
     "node": ">=20.0.0"
   },
   "categories": [
@@ -19,6 +19,9 @@
     "graph",
     "visualization",
     "lumina"
+  ],
+  "activationEvents": [
+    "onCustomEditor:lumina.blocksPreview"
   ],
   "main": "./dist/extension.js",
   "contributes": {

@@ -128,6 +128,38 @@ jobs:
         if: steps.version_check.outputs.should_publish == 'true'
         run: pnpm build
 
+      - name: Package extension
+        if: steps.version_check.outputs.should_publish == 'true'
+        run: pnpm package
+
+      - name: Get version
+        if: steps.version_check.outputs.should_publish == 'true'
+        id: get_version
+        run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        if: steps.version_check.outputs.should_publish == 'true'
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.get_version.outputs.VERSION }}
+          release_name: Release v${{ steps.get_version.outputs.VERSION }}
+          draft: false
+          prerelease: false
+
+      - name: Upload VSIX to GitHub Release
+        if: steps.version_check.outputs.should_publish == 'true'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./vscode-lumina-${{ steps.get_version.outputs.VERSION }}.vsix
+          asset_name: vscode-lumina-${{ steps.get_version.outputs.VERSION }}.vsix
+          asset_content_type: application/octet-stream
+
       - name: Publish to VS Marketplace
         if: steps.version_check.outputs.should_publish == 'true'
         run: pnpm publish

@@ -31,6 +31,9 @@ export default [
           message: 'Type assertions with "as" are not allowed except for mocking',
         },
       ],
+      // HTML templates in webview providers can be long
+      'max-lines-per-function': 'off',
+      'max-lines': 'off',
     },
   },
 ]
