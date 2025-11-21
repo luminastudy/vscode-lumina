@@ -83,6 +83,6 @@
     "vitest": "^4.0.12"
   },
   "dependencies": {
-    "@lumina-study/blocks-graph": "^0.1.0"
+    "@lumina-study/blocks-graph": "^0.1.2"
   }
 }

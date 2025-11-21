@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@lumina-study/blocks-graph':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.1.2
+        version: 0.1.2
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.1.0
@@ -662,8 +662,11 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@lumina-study/blocks-graph@0.1.0':
-    resolution: {integrity: sha512-MFRwRBDxWHzVWaSYhQCkIWY6eFslRSvQLOo5cfKxA2ya3evejwVnk7+NMjHxIL6Z86dOhYFMGtvI2TMBUmZbVQ==}
+  '@lumina-study/block-schema@1.0.0':
+    resolution: {integrity: sha512-5mwR1cqKHoW1e95FaL3PYCXY4uqqDE7u0yLGMPwyCqe2viFgQTKjwSGb1fWNDgmDf2LqmCyXVGD79EcRbBU1dQ==}
+
+  '@lumina-study/blocks-graph@0.1.2':
+    resolution: {integrity: sha512-Cl4gQEgIGv1h7rFL4a6kp7jx+nyHGpJSzjZGqAe7j5vIbdzztRLjW7YfDo2hlkCO94ntrVzoRpl3TenfYG1ycw==}
     engines: {node: '>=20.0.0', pnpm: '>=10.21.0'}
     peerDependencies:
       react: '>=16.8.0'
@@ -879,9 +882,6 @@ packages:
 
   '@textlint/types@15.4.0':
     resolution: {integrity: sha512-ZMwJgw/xjxJufOD+IB7I2Enl9Si4Hxo04B76RwUZ5cKBKzOPcmd6WvGe2F7jqdgmTdGnfMU+Bo/joQrjPNIWqg==}
-
-  '@tupe12334/block-schema@1.0.0':
-    resolution: {integrity: sha512-MTA7aITFFizVVtkQuOnKY9Twda49x4h2YMmJ0EgM7T+wOZGLHp1XRC0AHLQsziqEaguTGSQ5/Y0EmxQvCAYELg==}
 
   '@types/aria-query@5.0.4':
     resolution: {integrity: sha512-rfT93uj5s0PRL7EzccGMs3brplhcrghnDoV26NqKhCAS1hVo+WdNsPvE/yb6ilfr5hi2MEk6d5EWJTKdxg8jVw==}
@@ -4158,9 +4158,11 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@lumina-study/blocks-graph@0.1.0':
+  '@lumina-study/block-schema@1.0.0': {}
+
+  '@lumina-study/blocks-graph@0.1.2':
     dependencies:
-      '@tupe12334/block-schema': 1.0.0
+      '@lumina-study/block-schema': 1.0.0
       ajv: 8.17.1
       ajv-formats: 3.0.1(ajv@8.17.1)
 
@@ -4376,8 +4378,6 @@ snapshots:
   '@textlint/types@15.4.0':
     dependencies:
       '@textlint/ast-node-types': 15.4.0
-
-  '@tupe12334/block-schema@1.0.0': {}
 
   '@types/aria-query@5.0.4': {}
 
