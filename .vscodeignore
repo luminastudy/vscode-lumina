@@ -1,0 +1,60 @@
+# Source files (we ship compiled dist/)
+src/**
+*.ts
+!dist/**/*.ts
+
+# Test files
+**/*.spec.ts
+**/*.test.ts
+**/test/**
+**/tests/**
+**/__tests__/**
+**/__mocks__/**
+coverage/**
+
+# Development configs
+tsconfig.json
+vitest.config.ts
+eslint.config.mjs
+.prettierrc
+.prettierignore
+commitlint.config.mjs
+.lintstagedrc.json
+cspell.json
+
+# Git and CI/CD
+.git/**
+.gitignore
+.github/**
+.husky/**
+
+# Package manager files
+pnpm-lock.yaml
+.npmrc
+.pnpmfile.cjs
+
+# Custom project files
+.claude/**
+.kiro/**
+
+# Documentation (dev-only)
+CONTRIBUTING.md
+
+# Node modules (never ship)
+node_modules/**
+
+# Build artifacts (temp)
+*.vsix
+
+# Editor files
+.vscode/**
+.vscode-test/**
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+*.map
+*.tsbuildinfo
