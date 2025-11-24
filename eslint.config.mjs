@@ -34,6 +34,8 @@ export default [
       // HTML templates in webview providers can be long
       'max-lines-per-function': 'off',
       'max-lines': 'off',
+      // Allow re-throwing caught errors that are already typed as custom errors
+      'error/no-throw-literal': ['error', { allowThrowingUnknown: true }],
     },
   },
 ]

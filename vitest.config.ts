@@ -1,9 +1,10 @@
+import path from 'node:path'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   resolve: {
     alias: {
-      vscode: './src/__mocks__/vscode.ts',
+      vscode: path.resolve(__dirname, 'src/__mocks__/vscode.ts'),
     },
   },
   test: {
