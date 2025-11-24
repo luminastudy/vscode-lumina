@@ -21,6 +21,7 @@ eslint.config.mjs
 commitlint.config.mjs
 .lintstagedrc.json
 cspell.json
+esbuild.js
 
 # Git and CI/CD
 .git/**
@@ -30,6 +31,7 @@ cspell.json
 
 # Package manager files
 pnpm-lock.yaml
+pnpm-workspace.yaml
 .npmrc
 .pnpmfile.cjs
 

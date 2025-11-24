@@ -39,8 +39,8 @@
     ]
   },
   "scripts": {
-    "build": "tsc -p ./",
-    "dev": "tsc -watch -p ./",
+    "build": "node esbuild.js --production",
+    "dev": "node esbuild.js --watch",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --coverage",
@@ -74,6 +74,7 @@
     "@vitest/coverage-v8": "^4.0.12",
     "@vscode/vsce": "^3.7.0",
     "cspell": "^9.3.2",
+    "esbuild": "^0.27.0",
     "eslint": "^9.39.1",
     "eslint-config-agent": "^1.8.6",
     "husky": "^9.1.7",

@@ -148,7 +148,7 @@ export class LuminaBlocksEditorProvider
                     const parsedJson = JSON.parse(jsonContent);
 
                     // Import the blocks-graph library from CDN
-                    const { BlocksGraph } = await import('https://cdn.jsdelivr.net/npm/@lumina-study/blocks-graph@0.1.2/+esm');
+                    const { BlocksGraph } = await import('https://cdn.jsdelivr.net/npm/@lumina-study/blocks-graph@0.1.3/+esm');
 
                     // Clear loading message
                     document.getElementById('root').innerHTML = '';
